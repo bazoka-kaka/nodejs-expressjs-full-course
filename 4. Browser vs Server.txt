@@ -1,0 +1,36 @@
+BROWSER VS SERVER 
+=================
+
+browser:
+- DOM 
+- window 
+- interactive apps 
+- no filesystem 
+- fragmentation 
+- ES6 modules 
+
+node.js:
+- no DOM 
+you have no access to browser apis 
+this is because they don't exist in node 
+(there's no browser):
+no DOM, no geolocation, no fetch, and other cool 
+browser functionalities 
+- no window 
+- server side apps 
+- filesystem 
+we're gonna be able to access the file inside our windows, 
+info about our operating system, respond to network request, etc 
+- versions 
+unlike browser apps which depend on the user browser, 
+node depends on the version only this means that if our user's app 
+doesn't support a specific feature, it's our responsibility 
+to fix it 
+- commonJS 
+unlike browsers where modules are optional, 
+nodejs has access to modules by default 
+
+nodejs uses commonJS library for the module 
+while the general idea is exactly the same with 
+the es6 modules, syntax is a big difference 
+

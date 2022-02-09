@@ -1,0 +1,35 @@
+MIND GRANADE 
+============
+
+- example:
+first create a file called 7-mind-grenade.js 
+
+this is inside there:
+const num1 = 5;
+const num2 = 10;
+
+function addValues() {
+  console.log("The sum is " + (num1 + num2));
+}
+
+addValues();
+
+this is inside the app.js:
+require(__dirname + "/7-mind-grenade.js");
+
+note:
+notice that the 7-mind-grenade.js is only invoking 
+the function and in your app.js it's only 
+requiring the module and do nothing 
+
+remember:
+when you import a module, you actually invoke it 
+the reason is because this code is not just exported 
+on its own, when the node exports it, it actually wraps 
+it in the function.
+
+therefore if you require the module when you invoke the code, 
+you have some kind of function that is executed 
+(this is not about exporting something, this is about 
+envoking here and there)
+

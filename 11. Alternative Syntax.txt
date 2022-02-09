@@ -1,0 +1,23 @@
+ALTERNATIVE SYNTAX 
+==================
+
+- there's another way of doing this and this is 
+called export as you go
+
+example:
+first you have to create a new file called 6-alternate.js 
+
+this is inside there:
+module.exports.items = ["item1", "item2"];
+const person = {
+  name: "Bob",
+};
+
+module.exports.singlePerson = person;
+
+this is inside app.js:
+const data = require(__dirname + "/6-alternate.js");
+console.log(data);
+
+this is the output:
+{ items: [ 'item1', 'item2' ], singlePerson: { name: 'Bob' } }

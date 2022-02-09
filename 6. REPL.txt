@@ -1,0 +1,26 @@
+REPL 
+====
+
+- how to get node evaluate our code:
+1. REPL (Read Eval Print Loop)
+2. CLI 
+this means that we're running our app code in node 
+
+note:
+repl is for playing around and CLI is for everything else 
+
+REPL 
+----
+
+- to open repl in our terminal:
+> node 
+
+example:
+const name = "John";
+name 
+
+output:
+"John"
+
+- to close the repl:
+press ctrl + c 

@@ -1,0 +1,70 @@
+SYNC VS ASYNC FUNCTION 
+======================
+
+- if you are using sync:
+everything is gonna be line by 
+line after one line completed then 
+go to the next line
+(you have to wait for the task to finish 
+completing first)
+
+const { readFileSync, writeFileSync } = require("fs");
+console.log("start");
+const first = readFileSync("./content/first.txt", "utf-8");
+const second = readFileSync("./content/second.txt", "utf-8");
+
+console.log(first, second);
+
+writeFileSync(
+  "./content/result-sync.txt",
+  `Here is the result ${first} ${second}\n`,
+  { flag: "a" }
+);
+console.log("Done with this");
+console.log("Starting the next one");
+
+output:
+start
+Hello this is the first text file Hello this is the second text file        
+Done with this
+Starting the next one
+
+- if you are using async:
+this is gonna complete the code 
+from top to bottom first then 
+the async method is gonna run
+
+const { readFile, writeFile } = require("fs");
+console.log("start");
+
+readFile("./content/first.txt", "utf-8", function (err, results) {
+  if (err) {
+    console.log(err);
+    return null;
+  }
+  const first = results;
+  readFile("./content/second.txt", "utf-8", function (err, res) {
+    if (err) {
+      console.log(err);
+      return null;
+    }
+    const second = res;
+    writeFile(
+      "./content/results-sync.txt",
+      `Here is the results: ${first}, ${second}`,
+      function (err, results) {
+        if (err) {
+          console.log(err);
+          return null;
+        }
+      }
+    );
+  });
+  console.log("Done!");
+});
+console.log("Go to the next one!");
+
+output:
+start
+Go to the next one!
+Done!

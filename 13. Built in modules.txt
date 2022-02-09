@@ -1,0 +1,19 @@
+BUILD IN MODULE 
+===============
+
+intro
+-----
+
+built in modules:
+- os
+- path 
+- fs (file system module)
+- http 
+
+note:
+node has some built in modules that we can use 
+freely in our apps 
+
+this is where all the modules informations are:
+https://nodejs.org/dist/latest-v16.x/docs/api/
+

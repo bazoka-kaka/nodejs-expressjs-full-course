@@ -1,0 +1,52 @@
+NPM INTRO 
+=========
+
+- things npm enables us to do:
+1. reuse our own code in other project 
+2. use code written by other developers 
+3. share our own solutions with 
+other developers 
+
+this is the link:
+https://www.npmjs.com/
+
+- namings 
+a. package 
+npm calls the reusable codes 
+package 
+
+package is bassically a folder 
+that contains javascript codes 
+
+this is the same with modules and 
+dependencies 
+
+b. modules
+this is the same with the package 
+and dependencies
+
+c. dependencies
+this is the same with package and 
+modules 
+
+- important:
+a. there's no quality control 
+in npm registry 
+
+anyone can publish anything 
+
+b. you can see the security 
+of these packages from 
+weekly downloads 
+
+if the number is high, it's popular 
+then this is battle tested
+and is ready to go 
+
+c. if there is a bug, 
+there's a good chance that 
+someone has already fixed it 
+meaning it's already fixed 
+in the package or there's 
+a written solution 
+

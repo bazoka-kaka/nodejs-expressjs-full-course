@@ -1,0 +1,6 @@
+HTTP INTRO 
+==========
+
+- brief intro 
+- cover in detail (later/next sections)
+

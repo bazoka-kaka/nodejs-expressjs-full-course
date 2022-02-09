@@ -1,0 +1,11 @@
+WHAT IS NODE 
+============
+
+- environment to run javascript outside the browser
+- built on chrome's v8 js engine 
+nodejs was built on 2009 and the v8 js engine on chrome 
+was ripped out and node was put on top of it
+- big community 
+this is gonna save time on development
+- full-stack 
+front end and backend is build on one language, javascript

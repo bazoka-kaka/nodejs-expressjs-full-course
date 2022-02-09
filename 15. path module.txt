@@ -1,0 +1,93 @@
+PATH MODULE 
+===========
+
+- this is gonna make us able to interact with the 
+file path easily 
+
+- returning platform's separator:
+const path = require("path");
+
+//returns platform's separator
+console.log(path.sep);
+
+output:
+/ 
+
+note:
+different platforms might have different separator 
+
+- path.join() 
+to demonstrate, just create a new folder 
+called content then inside there craete 
+another folder called sub then inside 
+there create a new file called test.txt 
+inside there here's the text:
+test text 
+
+code:
+const path = require("path");
+
+//returns platform's separator
+console.log(path.sep);
+
+const filePath = path.join("/content", "subfolder", "test.txt");
+console.log(filePath);
+
+output:
+\content\subfolder\test.txt
+
+note:
+notice that if we do something like this:
+const filePath = path.join("/content/", "subfolder", "test.txt");
+the output is gonna be the same:
+\content\subfolder\test.txt
+
+this is because the /content/ "/" is gonna 
+be removed anyway 
+
+- outputting the basename only:
+use this method:
+path.basename(filePath)
+
+the code:
+const path = require("path");
+
+//returns platform's separator
+console.log(path.sep);
+
+const base = path.basename(filePath);
+console.log(base);
+
+output:
+test.txt
+
+note:
+this is gonna output the basename only 
+
+- absolute path 
+use this method:
+path.resolve(__dirname, '/path');
+
+code:
+const path = require('path');
+
+const absolute = path.resolve(__dirname, "content", "subfolder", "test.txt");
+console.log(absolute);
+
+output:
+D:\WebDev\Node.js and Express.js\youtube\Node.js and Express.js - Full Course (freecodecamp)\open editors\content\subfolder\test.txt
+
+final code:
+const path = require("path");
+
+//returns platform's separator
+console.log(path.sep);
+
+const filePath = path.join("/content/", "subfolder", "test.txt");
+console.log(filePath);
+
+const base = path.basename(filePath);
+console.log(base);
+
+const absolute = path.resolve(__dirname, "content", "subfolder", "test.txt");
+console.log(absolute);
