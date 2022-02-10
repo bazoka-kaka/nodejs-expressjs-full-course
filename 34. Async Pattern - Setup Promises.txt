@@ -1,0 +1,50 @@
+ASYNC PATTERNS - SETUP PROMISES 
+===============================
+
+- we could do something like this:
+const { readFile } = require("fs");
+
+readFile("./components/first.txt", "utf-8", function (err, data) {
+  if (!err) {
+    console.log(data);
+  }
+});
+
+problem:
+if we wanna perform multiple actions 
+
+better solution:
+turn this into a promise 
+
+note:
+we demonstrating using the promise 
+meaning that we're just gonna 
+understand what happens behind the scenes 
+
+this is the final code:
+const { readFile } = require("fs");
+
+const getText = (path) => {
+  return new Promise((resolve, reject) => {
+    readFile("./components/first.txt", "utf-8", function (err, data) {
+      if (!err) {
+        resolve(data);
+      } else {
+        reject(data);
+      }
+    });
+  });
+};
+
+getText("./components/first.txt")
+  .then((result) => {
+    console.log(result);
+  })
+  .catch((err) => {
+    console.log(err);
+  });
+
+
+output:
+The best japanese games in the world
+

@@ -1,0 +1,22 @@
+EVENTS EMITER - CODE EXAMPLE 
+============================
+
+- on --> listen for an event 
+- emit --> emit an event 
+
+example code:
+//common practice is to name this EventEmitter
+const EventEmitter = require("events");
+
+const customEmitter = new EventEmitter();
+
+customEmitter.on("response", function () {
+  //do something here
+  console.log(`Data received`);
+});
+
+customEmitter.emit("response");
+
+output:
+Data received 
+

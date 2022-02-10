@@ -36,5 +36,3 @@ writeFileSync(
   `Here is the result ${first} ${second}\n`,
   { flag: "a" }
 );
-
-

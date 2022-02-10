@@ -1,0 +1,75 @@
+EVENT LOOP SLIDES 
+=================
+
+https://course-api.com/
+
+- what it means that javascript is 
+synchronous and single threaded?
+
+single threaded --> javascript reads
+everything line by line 
+
+- solution if we want to offload 
+something to the browser:
+when we create browser javascript apps
+we have the option of offloading 
+to the browser
+
+this doesn't mean 
+we can offload the for loop
+(it's not gonna work)
+
+but browser provides the api where 
+we can offload those tasks to the browser 
+and only when the tasks is done then 
+we can execute the callback, 
+probably the example that we've 
+done the most is the fetch 
+but we can also do this using setTimeout() 
+
+example:
+console.log("first task");
+setTimeout(() => {
+  console.log("second task");
+}, 0);
+
+console.log("next task");
+
+output:
+first task 
+next task 
+second task 
+
+note:
+again it doesn't mean 
+that the browser offloads for loops 
+but the browser provides some apis 
+where we don't have to write
+the blocking code 
+
+- we can't offload for loops 
+that means we could still write
+blocking codes in javascript 
+but the browser has some nice api where 
+we can offload those time consuming 
+tasks 
+(the nodejs eventloop api)
+
+- event loop 
+event loop meaning we dont
+wait one request to be completed 
+first, but we do another 
+tasks at the same time 
+
+single threading doesn't mean that the
+task 
+is long or something, but that 
+the waiting is the one that is 
+preventing another processes to 
+happen at the same time, which takes 
+time 
+
+event loop bassically do 
+all the immediate tasks first 
+then the callbacks are 
+executed 

@@ -1,0 +1,36 @@
+package-log.json 
+================
+
+- why do we need it?
+for version control, meaning if 
+the person are using your product 
+but they are running on dependency 
+with different version, then 
+it's gonna be absolute or there
+would be some bugs there 
+
+package-log.json contains the specific 
+versions of dependencies and 
+the dependencies that those dependencies
+are using 
+
+- there are three values in the 
+version of dependencies in 
+package-log.json 
+
+example:
+"lodash": "^4.17.20"
+
+4 --> this is a major change
+meaning if this changes 
+then there are some break and change 
+17 --> this is a minor one 
+(backward compatible), meaning if 
+this changes to 18 then we shouldn't 
+expect any break and changes 
+20 --> this is just a patch
+for the bug fix 
+
+further read:
+https://nodesource.com/blog/the-basics-of-package-json-in-node-js-and-npm/
+

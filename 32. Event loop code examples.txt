@@ -1,0 +1,78 @@
+EVENT LOOP CODE EXAMPLES 
+========================
+
+- first example:
+const { readFile, writeFile } = require("fs");
+
+console.log("started a first task");
+
+readFile("./components/first.txt", "utf-8", function (err, results) {
+  if (err) {
+    console.log(err);
+    return null;
+  }
+  console.log(results);
+  console.log("Completed first task");
+});
+
+console.log("Starting next task");
+
+output:
+started a first task
+Starting next task
+The best japanese games in the world      
+Completed first task
+
+- next example:
+console.log("first");
+setTimeout(() => {
+  console.log("second");
+}, 0);
+console.log("third");
+
+output:
+first
+third
+second
+
+- another one:
+
+setInterval(() => {
+  console.log("Hello World");
+}, 2000);
+console.log("I run first!");
+
+
+output:
+I run first!
+Hello World
+Hello World
+Hello World
+
+- last example:
+const http = require("http");
+
+const server = http.createServer(function (req, res) {
+  console.log("request event");
+  res.end("Hello World!");
+});
+
+server.listen(3000, function () {
+  console.log("Server is up and running");
+});
+
+output:
+Server is up and running
+request event
+request event
+request event
+request event
+request event
+request event
+request event
+request event
+request event
+request event
+request event
+request event
+

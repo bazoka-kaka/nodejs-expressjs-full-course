@@ -1,0 +1,19 @@
+STREAMS INTRO 
+=============
+
+4 types of streams:
+- writeable
+- readable 
+- duplex 
+- transform 
+
+note:
+streams bassically is used 
+to read or write sequentially 
+
+bassically when we have to handle 
+and manipulate streaming data 
+for example continous source 
+or a big file, stream comes real 
+handy 
+

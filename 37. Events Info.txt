@@ -1,0 +1,18 @@
+EVENTS INFO 
+===========
+
+- event-driven programming 
+- used heavily in node.js 
+
+examples:
+user click, user hover over the links,
+etc 
+
+programs that are using these 
+events is called event driven 
+programming 
+
+1. listens for an event 
+2. register a function that 
+will execute in response of it 
+

@@ -1,0 +1,31 @@
+STREAMS - READ FILES 
+====================
+
+- use case:
+using streams when we're reading files 
+because we need to understand one 
+thing:
+when we use the sync approach, 
+what happens: we're reading the whole 
+file 
+
+but if we have a big file 
+you're just using all of that memory 
+and as the file gets bigger and bigger 
+the variable isn't gonna be good enough 
+(the size is too big and you can't put 
+anything in the string anymore)
+
+solution:
+read stream option 
+
+example:
+first create a big file:
+const { writeFileSync } = require("fs");
+for (let i = 0; i < 1000; ++i) {
+  //
+  writeFileSync("./components/bigFile.txt", `Hello World ${i}\n`, {
+    flag: "a",
+  });
+}
+

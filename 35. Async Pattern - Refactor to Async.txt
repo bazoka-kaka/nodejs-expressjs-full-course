@@ -1,0 +1,47 @@
+ASYNC PATTERN - REFACTOR TO ASYNC 
+=================================
+
+- if we wanna read and write to 
+multiple files, the promises alone 
+is going to be a pain in the ass 
+
+solution:
+async awaits till the promise is settled 
+then decide what we wanna do 
+
+this is the final code:
+const { readFile } = require("fs");
+
+const getText = function (path) {
+  return new Promise((resolve, reject) => {
+    readFile(path, "utf-8", function (err, data) {
+      if (!err) {
+        resolve(data);
+      } else {
+        reject(data);
+      }
+    });
+  });
+};
+
+const start = async function () {
+  try {
+    const first = await getText("./components/first.txt");
+    const second = await getText("./components/second.txt");
+    console.log(first);
+    console.log(second);
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+start();
+
+output:
+first
+second
+
+notice the difference:
+previously: 
+when we're setting up the callbacks 
+we had to nest everything 

@@ -1,0 +1,48 @@
+ASYNC PATTERNS - NODE'S NATIVE OPTIONS 
+======================================
+
+- we're gonna use promisify 
+promisify --> take our readFile 
+then turn it into the function 
+that returns a promise 
+
+full code:
+const { readFile, writeFile } = require("fs");
+const util = require("util");
+const readFilePromise = util.promisify(readFile);
+const writeFilePromise = util.promisify(writeFile);
+
+const start = async function () {
+  try {
+    const first = await readFilePromise("./components/first.txt", "utf-8");
+    const second = await readFilePromise("./components/second.txt", "utf-8");
+    await writeFilePromise(
+      "./components/result-sync.txt",
+      `THIS IS AWESOME: ${first}, ${second}`
+    );
+    console.log(first, second);
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+start();
+
+- you can also do this instead:
+const { readFile, writeFile } = require("fs").promises;
+
+const start = async function () {
+  try {
+    const first = await readFile("./components/first.txt", "utf-8");
+    const second = await readFile("./components/second.txt", "utf-8");
+    await writeFile(
+      "./components/result-sync.txt",
+      `THIS IS AWESOME: ${first}, ${second}`
+    );
+    console.log(first, second);
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+start();

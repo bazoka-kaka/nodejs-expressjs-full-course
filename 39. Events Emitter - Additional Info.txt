@@ -1,0 +1,61 @@
+EVENTS EMITTER - ADDITIONAL INFO 
+================================
+
+1. we can have as many methods as we 
+want 
+
+example:
+//common practice is to name this EventEmitter
+const EventEmitter = require("events");
+
+const customEmitter = new EventEmitter();
+
+customEmitter.on("response", function () {
+  //do something here
+  console.log(`Data received`);
+});
+
+customEmitter.on("response", function () {
+  //do something here
+  console.log(`Some other logic here`);
+});
+
+customEmitter.emit("response");
+
+output:
+Data received 
+Some other logic here 
+
+2. this orders matter
+
+meaning we have to listen to 
+the response first then we could emit 
+
+if we emit first before listening 
+to the response, then the code 
+won't work 
+
+3. we can pass the arguments 
+when we're omitting the event 
+
+example:
+//common practice is to name this EventEmitter
+const EventEmitter = require("events");
+
+const customEmitter = new EventEmitter();
+
+customEmitter.on("response", function (name, id) {
+  //do something here
+  console.log(`Data received ${name}, ${id}`);
+});
+
+customEmitter.on("response", function () {
+  //do something here
+  console.log(`Some other logic here`);
+});
+
+customEmitter.emit("response", "Yehezkel", 20);
+
+output:
+Data received Yehezkel, 20
+Some other logic here
