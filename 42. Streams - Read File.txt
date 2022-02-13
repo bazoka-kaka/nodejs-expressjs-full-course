@@ -29,3 +29,11 @@ for (let i = 0; i < 1000; ++i) {
   });
 }
 
+we read it like this:
+const { createReadStream } = require("fs");
+
+const stream = createReadStream("./components/bigFile.txt", "utf-8");
+
+stream.on("data", function (data) {
+  console.log(data);
+});

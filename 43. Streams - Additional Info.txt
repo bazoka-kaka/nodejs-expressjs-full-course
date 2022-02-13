@@ -1,0 +1,35 @@
+ADDITIONAL INFO 
+===============
+
+- the data is ... bytes, but we can control 
+it by passing in the object when 
+we're setting up create read stream 
+
+- last buffer - remainder 
+- highWaterMark - control size 
+example:
+const stream = createReadStream("./components/big1.txt", {
+  highWaterMark: 90000,
+  encoding: "utf-8",
+});
+
+you can also pass in the error request:
+stream.on("error", (err) => {
+  console.log(err);
+});
+
+full code:
+const { createReadStream } = require("fs");
+
+const stream = createReadStream("./components/big1.txt", {
+  highWaterMark: 90000,
+  encoding: "utf8",
+});
+
+stream.on("data", (result) => {
+  console.log(result);
+});
+
+stream.on("error", (err) => {
+  console.log(err);
+});

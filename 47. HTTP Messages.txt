@@ -1,0 +1,47 @@
+HTTP MESSAGES 
+=============
+
+- how http messages are structured?
+
+- two types of http message:
+1. request 
+this is what the user is sending 
+
+2. response 
+the server's response according 
+to what the user requests 
+
+something about these http messages 
+-----------------------------------
+the general structure of both 
+is similar 
+they both have start line, optional headers, 
+blank line that indicates all the meta 
+info has been sent (headers are the meta info),
+also optional body,
+
+HTTP METHODS 
+------------
+
+- methods are ways of communicating 
+what we wanna do 
+
+4 types of HTTP methods:
+1. GET --> read data
+this is the default request 
+of the browser
+
+2. POST --> insert data
+3. PUT --> update data 
+4. DELETE --> delete data 
+
+HEADERS 
+-------
+
+this is optional which is just 
+bassically meta informations 
+about our request 
+
+when you add the web, you don't need 
+to add these manually 
+

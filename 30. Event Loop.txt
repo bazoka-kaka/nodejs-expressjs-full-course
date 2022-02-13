@@ -1,13 +1,13 @@
 EVENT LOOP 
-==========
+========== 
 
-- what is event loop?
+- what is event loop? 
 event loop is what allows nodejs 
 to perform non-blocking IO 
-operations despite the fact that
+operations despite the fact that 
 javascript is single threaded 
 by offloading operations to the system 
-kernel whenever possible
+kernel whenever possible 
 
 more read:
 https://nodejs.dev/learn/the-nodejs-event-loop
