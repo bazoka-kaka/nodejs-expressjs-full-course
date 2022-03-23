@@ -1,9 +1,0 @@
-COURSE STRUCTURE
-================
-
-- intro 
-- install 
-- node fundamentals 
-- express tutorial
-- building apps... 
-

@@ -1,8 +1,0 @@
-COURSE REQUIREMENTS
-===================
-
-- html, css, js, es6 
-- callbacks, promises, async-await 
-- youtube - coding addict 
-- playlist - js nuggets 
-
