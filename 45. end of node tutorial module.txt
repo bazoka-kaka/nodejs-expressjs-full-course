@@ -1,6 +1,0 @@
-END OF NODE TUTORIAL MODULE 
-===========================
-
-- done with node fundamentals 
-- next stop creating servers 
-
